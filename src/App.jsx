@@ -1,5 +1,6 @@
 import Player from "./Player";
 import GameBoard from "./GameBoard";
+import Log from "./Log";
 import { useState } from "react";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         </ol>
         <GameBoard onSquareClick={handleSquareClick} turns={gameTurns} />
       </div>
+      <Log turns={gameTurns} />
     </main>
   );
 }

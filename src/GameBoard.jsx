@@ -20,7 +20,10 @@ export default function ({ onSquareClick, turns }) {
           <ol>
             {row.map((symbol, colIdx) => (
               <li key={colIdx}>
-                <button onClick={() => onSquareClick(rowIdx, colIdx)}>
+                <button
+                  onClick={() => onSquareClick(rowIdx, colIdx)}
+                  disabled={symbol}
+                >
                   {symbol}
                 </button>
               </li>
