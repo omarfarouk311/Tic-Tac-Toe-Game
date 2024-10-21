@@ -1,21 +1,7 @@
-const gameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
-
-export default function ({ onSquareClick, turns }) {
-  if (turns.length) {
-    const {
-      square: { row, col },
-      activePlayer,
-    } = turns[0];
-    gameBoard[row][col] = activePlayer;
-  }
-
+export default function ({ onSquareClick, board }) {
   return (
     <ol id="game-board">
-      {gameBoard.map((row, rowIdx) => (
+      {board.map((row, rowIdx) => (
         <li key={rowIdx}>
           <ol>
             {row.map((symbol, colIdx) => (
